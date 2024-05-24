@@ -88,3 +88,57 @@ function completeRecursion (startNumer) {
 }
 
 console.log(completeRecursion(10))
+
+//LOOPS
+//Let do the old way of using loops
+
+const cars = ["Bmw", "Audi", "Mercedes", "AMG"]
+
+for (let i = 0; i < cars.length; i++) {
+    console.log(cars[i])
+}
+
+//We should be using ES6 functions instead
+//We can user MAP or ForEach: Differnce is that Map returns a new array with value and forEach does not return am array.
+//You can see that in the REPL
+
+const planes = ["Boing 787", "Boing 747", "Boing 737-Max", "Boing 777", "Airbus A380", "Airbus A30", "Airbus 757"];
+
+//map is used to iterate over an array and transform each element into a new value. It returns a new array with the updated value
+planes.map((plane) => {
+    console.log(plane)
+    return planes
+})
+
+//forEach is used to iterate over an array and perform a function on each element, but it does not return a new array.
+planes.forEach((plane) => {
+    console.log(plane)
+    return planes
+})
+
+//map does not modify the original array.
+
+const numbers = [1,2,3,4,5];
+
+const multipliedNumber = numbers.map((number) => {
+    return number * 5
+})
+
+console.log(multipliedNumber);
+
+// forEach does not modify the original array.
+const secondSetNumbers = [6,7,8,9,10];
+const multipliedSecondSet = secondSetNumbers.map((number) => {
+    return number * 5
+})
+
+console.log(secondSetNumbers);
+
+
+//Map with 2 dimension array
+
+const voiture = [["BWM", "Audi"], ["Mercedes", "AMG"], ["Honda", "Acura"], ["Lambo", "Ferrari"]]
+
+const genreOfCars = voiture.map((car) => {
+    console.log(car);
+})
