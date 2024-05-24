@@ -40,4 +40,27 @@ const personID = (name, age)  => {
  console.log(`My name is ${name} and I am ${age}`)
 }
 
-personID("Emily", 36)
+personID("Emily", 36);
+
+
+//Partial function
+
+/**This is a higher-order function that creates a partially applied function. Here’s how it works:
+
+First Step: You provide the first number (let's call it the "multiplier").
+Second Step: The function returns a new function that takes the second number and multiplies it by the first number.
+ */
+const multiplier = (multiplier) => (number) => {
+    return multiplier * number;
+}
+const doubleNumber = multiplier(2);
+
+
+console.log(doubleNumber(10))
+
+
+const createURL = baseURL => path => `https://${baseURL}/${path}`;
+
+const myURL = createURL("www.devloper.com")("learn");
+
+console.log(myURL)
