@@ -142,3 +142,14 @@ const voiture = [["BWM", "Audi"], ["Mercedes", "AMG"], ["Honda", "Acura"], ["Lam
 const genreOfCars = voiture.map((car) => {
     console.log(car);
 })
+
+// ASYNC 
+
+const fetchAPItoDos = async () => {
+    const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+    const todos = await res.json();
+    console.log(todos);
+
+    return todos;
+}
+fetchAPItoDos()
