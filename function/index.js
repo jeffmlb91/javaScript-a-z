@@ -64,3 +64,27 @@ const createURL = baseURL => path => `https://${baseURL}/${path}`;
 const myURL = createURL("www.devloper.com")("learn");
 
 console.log(myURL)
+
+//Recursive JS function 
+//First learning what it does
+function countDown(fromNumber) {
+    if(fromNumber >= 0) {
+        console.log(fromNumber);
+        countDown(fromNumber - 1);
+    } else {
+        console.log(0);
+    }
+}
+console.log(countDown(10))
+
+//Now Recursion -> Doing it the proper way
+
+function completeRecursion (startNumer) {
+    //We start with the base condition to exit the recursion first
+    
+    if(startNumer < 0) return
+    console.log(startNumer);
+    completeRecursion(startNumer - 1)
+}
+
+console.log(completeRecursion(10))
