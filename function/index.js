@@ -137,7 +137,7 @@ console.log(secondSetNumbers);
 
 //Map with 2 dimension array
 
-const voiture = [["BWM", "Audi"], ["Mercedes", "AMG"], ["Honda", "Acura"], ["Lambo", "Ferrari"]]
+const voiture = [["WM", "Audi"], ["Mercedes", "AMG"], ["Honda", "Acura"], ["Lambo", "Ferrari"]]
 
 const genreOfCars = voiture.map((car) => {
     console.log(car);
@@ -169,3 +169,16 @@ async function oldWaytoFetch() {
     console.log(data);
 }
 oldWaytoFetch()
+
+//We can also fetch some data inside of a function. When calling the inner function, the scope is limited to the block of the outter function
+//Meaning that we can only call this function inside the outer function
+
+const fetchInnerFuncData = async() => {
+    const innerFuctionData = async() => {
+        const res = await fetch('https://api.escuelajs.co/api/v1/products')
+        const data = await res.json()
+        console.log(data);
+    }
+    innerFuctionData()
+}
+fetchInnerFuncData()
