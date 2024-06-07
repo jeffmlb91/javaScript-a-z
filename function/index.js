@@ -153,3 +153,19 @@ const fetchAPItoDos = async () => {
     return todos;
 }
 fetchAPItoDos()
+
+const fetchSecondApi = async() => {
+    const response = await fetch('https://dummyapi.online/api/users')
+    const data = await response.json();
+    console.log(data);
+}
+fetchSecondApi()
+
+// We can also write it the traditional way
+
+async function oldWaytoFetch() {
+    const response = await fetch('https://dummyapi.online/api/movies')
+    const data = await response.json();
+    console.log(data);
+}
+oldWaytoFetch()
